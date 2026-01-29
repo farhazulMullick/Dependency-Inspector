@@ -9,6 +9,14 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
+        <!-- Dependency Inspector Tool Window -->
+        <toolWindow
+            factoryClass="com.github.farhazulmullick.dependencyinspector.toolWindow.DependencyInspectorToolWindowFactory"
+            id="Dependency Conflicts"
+            anchor="left"
+            icon="AllIcons.Toolwindows.ToolWindowStructure"/>
+
+        <!-- Legacy Tool Window (can be removed) -->
         <toolWindow factoryClass="com.github.farhazulmullick.dependencyinspector.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
         <postStartupActivity implementation="com.github.farhazulmullick.dependencyinspector.startup.MyProjectActivity" />
     </extensions>
