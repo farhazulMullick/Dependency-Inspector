@@ -9,6 +9,10 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
+        <codeInsight.inlayProvider
+                language="TOML"
+                implementationClass="com.github.farhazulmullick.dependencyinspector.hints.VersionCatalogInlayHintsProvider"
+        />
         <!-- Dependency Inspector Tool Window -->
         <toolWindow
             factoryClass="com.github.farhazulmullick.dependencyinspector.toolWindow.DependencyInspectorToolWindowFactory"
