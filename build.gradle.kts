@@ -22,6 +22,7 @@ kotlin {
 // Configure project's dependencies
 repositories {
     mavenCentral()
+    maven { url = uri("https://repo.gradle.org/gradle/libs-releases") }
 
     // IntelliJ Platform Gradle Plugin Repositories Extension - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-repositories-extension.html
     intellijPlatform {
@@ -31,6 +32,9 @@ repositories {
 
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/version_catalogs.html
 dependencies {
+    implementation("org.gradle:gradle-tooling-api:9.2.1")
+    // The tooling API need an SLF4J implementation available at runtime, replace this with any other implementation
+    runtimeOnly("org.slf4j:slf4j-simple:2.0.17")
     testImplementation(libs.junit)
     testImplementation(libs.opentest4j)
 

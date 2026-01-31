@@ -5,6 +5,7 @@
     <vendor>farhazulmullick</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.gradle</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
